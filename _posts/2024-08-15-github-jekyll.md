@@ -17,14 +17,14 @@ exe파일을 pc에서 보안차단할 경우 관리자로 실행(추가정보 �
 
 
 # Jekyll 설치
-# Jekyll 프로젝트 생성
-# 윈도우 터미널 또는 vscode 터미널을 열고 실행
-c:\dir>jekyll new mysite  
-c:\dir>cd mysite  
-c:\dir> mysite > jekyll serve  
-c:\dir> mysite > bundle install  
-c:\dir> mysite > bundle exec jekyll serve  
+어떤폴더 터미널> gem install bundler
+어떤폴더 터미널> gem install jekyll
 
+# Jekyll 프로젝트 생성
+c:> jekyll new mysite  
+c:> cd mysite  
+실행1 c:\dir> mysite > bundle exec jekyll serve  
+실행2 c:> mysite > jekyll serve  (gem 버전오류 가능-비추)
 
 ### 크롬 브라우저 열고 나의 제킬 웹사이트 확인
 http://localhost:4000 
