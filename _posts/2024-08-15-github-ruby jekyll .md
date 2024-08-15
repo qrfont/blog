@@ -43,6 +43,19 @@ http://localhost:4000
 ### 포트 변경해서 실행
 터미널 > jekyll serve --port 4001 
 
+### 플러그인 설치
+프로젝트 폴더 > Gemfile 파일 열어서  
+```
+group :jekyll_plugins do
+    gem "jekyll-feed", "~> 0.12"
+    gem "jekyll-seo-tag", "~> 2.7"
+    gem "jekyll-sitemap", "~> 1.4"
+    gem "jekyll-paginate"  
+    gem "jekyll-spaceship"  
+  end
+```
+> bundle install
+> 
 
 ### 설치 TIP
 - 최신 루비버전은 설치중 에러가 날 확률이 높으므로 낮은버전 3.0 추천
