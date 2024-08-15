@@ -29,12 +29,12 @@ c:\dir> mysite > bundle exec jekyll serve  (권장 실행)
 c:> jekyll new-theme mytheme    
 c:> cd mytheme  
 
-gemfiele 파일 생성
-jekyll-rara.gemspec 파일 생성
+gemfiele 파일 생성  
+jekyll-rara.gemspec 파일 생성  
 
-c:mytheme> bundle install
-c:mytheme> bundle install
-c:mytheme> bundle exec jekyll serve  (실행)
+c:mytheme> bundle install  
+c:mytheme> bundle install  
+c:mytheme> bundle exec jekyll serve  (실행)  
 
 
 
