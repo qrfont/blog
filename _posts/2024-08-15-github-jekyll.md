@@ -24,11 +24,15 @@ exe파일을 pc에서 보안차단할 경우 관리자로 실행(추가정보 �
 c:> jekyll new mysite  
 c:> cd mysite  
 c:\dir> mysite > bundle exec jekyll serve  (권장 실행)
-~~c:> mysite > jekyll serve  (gem 버전오류 가능-비추)~~
 
 ### 크롬 브라우저 열고 나의 제킬 웹사이트 확인
 http://localhost:4000 
 ### 포트 변경해서 실행
 터미널 > jekyll serve --port 4001 
-#gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
-gem 'wdm', '~> 0.1.1', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+### 설치 TIP
+- 최신 루비버전은 설치중 에러가 날 확률이 높으므로 낮은버전 3.0 추천
+- 제킬 실행시
+- c:\dir> mysite > bundle exec jekyll serve  (권장 실행)
+~~c:> mysite > jekyll serve  (gem 버전오류 가능-비추)~~
