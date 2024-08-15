@@ -1,13 +1,24 @@
 ---
 layout: post
-title: my test pate title
-subtitle: My test  subtitle 
-categories: markdown
-tags: [test]
+title: 깃허브 jekyll 프로젝트 생성
+subtitle: 설치
+categories: github
+tags: [github, jekyll]
 ---
 
-* A safe integer is an integer that -
-  * can be exactly represented as an IEEE-754 double precision number, and
-  * whose IEEE-75 representation cannot be the result of rounding any other integer to fit the IEEE-754 representation
-* For example, $ 2 ^ {53} - 1 $ is a safe integer,
-  * it can be exactly represented 
+### Ruby 설치
+### Jekyll 설치
+### Jekyll 프로젝트 생성
+## 윈도우 터미널 또는 vscode 터미널을 열고 실행
+c:\dir>jekyll new mysite
+c:\dir>cd mysite
+c:\dir> mysite > jekyll serve
+c:\dir> mysite > bundle exec jekyll serve
+실행 안되면 번들 설치후 진행 
+c:\dir> mysite > bundle install 
+c:\dir> mysite > bundle exec jekyll serve
+
+## 크롬 브라우저 열고 나의 제킬 웹사이트 확인
+http://localhost:4000
+## 포트 변경해서 실행
+터미널 > jekyll serve --port 4001
