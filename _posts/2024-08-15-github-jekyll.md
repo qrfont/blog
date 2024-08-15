@@ -13,10 +13,9 @@ tags: [github, jekyll]
 c:\dir>jekyll new mysite  
 c:\dir>cd mysite  
 c:\dir> mysite > jekyll serve  
-c:\dir> mysite > bundle exec jekyll serve  
-### 실행 안되면 번들 설치후 진행 
 c:\dir> mysite > bundle install  
 c:\dir> mysite > bundle exec jekyll serve  
+
 
 ### 크롬 브라우저 열고 나의 제킬 웹사이트 확인
 http://localhost:4000 
