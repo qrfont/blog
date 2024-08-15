@@ -25,9 +25,9 @@ exe파일을 pc에서 보안차단할 경우 관리자로 실행(추가정보 �
 c:> jekyll new mysite  
 c:> cd mysite  
 c:\dir> mysite > bundle exec jekyll serve  (권장 실행)
-# Jekyll 나만의 테마 생성
-c:> jekyll new-theme mytheme  
-c:> cd mytheme
+# Jekyll 나만의 테마 생성  
+c:> jekyll new-theme mytheme    
+c:> cd mytheme  
 
 gemfiele 파일 생성
 jekyll-rara.gemspec 파일 생성
