@@ -10,7 +10,7 @@ tags: [github, jekyll]
 ### Jekyll 설치
 ### Jekyll 프로젝트 생성
 ## 윈도우 터미널 또는 vscode 터미널을 열고 실행
-  c:\dir>jekyll new mysite 
+  c:\dir>jekyll new mysite  
   c:\dir>cd mysite 
   c:\dir> mysite > jekyll serve 
   c:\dir> mysite > bundle exec jekyll serve 
