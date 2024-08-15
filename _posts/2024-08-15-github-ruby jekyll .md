@@ -6,7 +6,8 @@ categories: github
 tags: [github, jekyll]
 ---
 
-# Ruby 설치
+# Ruby 설치  
+
 ### 권장 버전 
 [https://rubyinstaller.org/downloads/  ](https://rubyinstaller.org/downloads/)
 Ruby+Devkit 3.0.7-1 (x64)  
