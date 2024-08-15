@@ -21,10 +21,14 @@ exe파일을 pc에서 보안차단할 경우 관리자로 실행(추가정보 �
 어떤폴더 터미널> gem install bundler
 어떤폴더 터미널> gem install jekyll
 
-# Jekyll 프로젝트 생성
+# Jekyll 프로젝트 생성 (기본테마 설치됨 minimal)
 c:> jekyll new mysite  
 c:> cd mysite  
 c:\dir> mysite > bundle exec jekyll serve  (권장 실행)
+# Jekyll 나만의 테마 생성
+c:> jekyll new-theme mytheme  
+c:> cd mytheme
+
 
 ### 크롬 브라우저 열고 나의 제킬 웹사이트 확인
 http://localhost:4000 
