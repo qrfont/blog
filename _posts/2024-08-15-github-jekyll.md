@@ -23,8 +23,8 @@ exe파일을 pc에서 보안차단할 경우 관리자로 실행(추가정보 �
 # Jekyll 프로젝트 생성
 c:> jekyll new mysite  
 c:> cd mysite  
-실행1 c:\dir> mysite > bundle exec jekyll serve  
-실행2 c:> mysite > jekyll serve  (gem 버전오류 가능-비추)
+c:\dir> mysite > bundle exec jekyll serve  (권장 실행)
+~~c:> mysite > jekyll serve  (gem 버전오류 가능-비추)~~
 
 ### 크롬 브라우저 열고 나의 제킬 웹사이트 확인
 http://localhost:4000 
