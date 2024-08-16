@@ -1,0 +1,231 @@
+---
+layout: editor
+title: EDITOR
+permalink: /editor/
+
+---
+<link rel="canonical" href="https://summernote.org/themes.html">
+
+<!-- jquery, bootstrap -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- codemirror -->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.41.0/codemirror.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.41.0/theme/blackboard.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.41.0/theme/monokai.min.css">
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.41.0/codemirror.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.41.0/mode/xml/xml.min.js"></script>
+
+<!-- add summernote -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-ko-KR.min.js"></script>
+
+<!-- for website -->
+<!-- <script src="https://summernote.org/js/toc.js"></script> -->
+<!-- <script src="https://summernote.org/js/sidebar.js"></script> -->
+<!-- <link rel="stylesheet" href="https://summernote.org/css/main.css"> -->
+<style>
+
+ .trigger{
+    display: inline;
+    
+}
+
+body {
+  overflow-y: hidden; 
+  //background-color: #248794ff;
+}
+.titleDiv {
+ 
+  height: 60px;
+}
+
+.page-content {
+  padding: 0px;
+  margin: 0px;
+  padding-top: 0px;
+  background-color: #248794ff;
+ 
+}
+.wrapper {
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+  padding-top:0px;
+  
+}
+
+
+
+
+/** edit setting */
+.containerDiv {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.toolbarDiv {
+  position: fixed;
+  top: 130px;
+  
+  width: 100%; 
+  z-index: 1000; 
+}
+
+.note-editable .note-codable{
+  min-height: 500px;
+}
+.title-H {
+  text-align: center;
+  color:#ffffff;
+}
+
+.btn-html,
+.btn-html:hover,
+.btn-html:active{
+  background-color: rgb(0, 186, 199);
+  font-size: 12px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.btn-html.active:hover,
+.btn-html.active:active,
+.btn-html.active {
+  background-color: rgb(0, 173, 192);
+  font-size: 12px;
+  color: #fff;
+  font-weight: 300;
+}
+/* editor textarea*/
+
+.note-editable {
+  padding-left: 120px !important;
+  padding-right: 120px !important; 
+  background-color: white; 
+  box-sizing: border-box; 
+  position: relative;
+  box-shadow: inset 100px 0 0 0 #eee, inset -100px 0 0 0 #eee; 
+}
+
+@media screen and (max-width: 767px) {
+  .note-editable {
+    padding-left: 0 !important; 
+    padding-right: 0 !important; 
+    box-shadow: none !important; 
+    background-color: white !important; 
+  }
+}
+
+.note-toolbar .custom-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.note-toolbar .btn-custom {
+  margin-left: 10px; 
+}
+
+</style>
+<script type="text/javascript">
+  $(document).ready(function() {
+     function adjustSummernoteHeight() {
+         var headerHeight = 200;
+         var viewportHeight = window.innerHeight;
+         var heightVariable = viewportHeight - headerHeight;
+ 
+         $('#summernote').summernote('destroy');
+ 
+        $('#summernote').summernote({
+             height: heightVariable,
+             codemirror: {
+                 mode: 'text/html', 
+                 htmlMode: true,
+                 lineNumbers: true,
+                 theme: 'slate'  // slate / blackboard / monokai
+             },
+             toolbar: [
+                 ['style', ['style']],
+                 ['font', ['bold', 'italic', 'underline', 'clear']],
+                 ['fontname', ['fontname']],
+                 ['color', ['color']],
+                 ['para', ['ul', 'ol', 'paragraph']],
+                 ['height', ['height']],
+                 ['insert', ['link', 'picture', 'video', 'help']],
+                 ['code', ['codeview']],
+                 ['custom', ['html']]  // 'fullscreen',
+                 // Custom toolbar group for right-aligned buttons
+             ],
+             callbacks: {
+                 onInit: function() {
+                     // You can perform additional initializations here
+                 }
+             },
+             buttons: {
+                 html: function(context) {
+                     var ui = $.summernote.ui;
+                     var button = ui.button({
+                        className: 'btn-html',
+                         contents: '<i class="fa fa-download"/> Download HTML',
+                         tooltip: 'Download HTML',
+                         click: function() {
+                             var htmlContent = $('#summernote').summernote('code');
+                             var blob = new Blob([htmlContent], { type: 'text/html' });
+                             var link = document.createElement('a');
+                             link.href = URL.createObjectURL(blob);
+                             link.download = 'content.html'; // Default download file name
+                             document.body.appendChild(link);
+                             link.click();
+                             document.body.removeChild(link);
+                             alert('Download completed!');
+                         }
+                     });
+                     return button.render(); // Return button as jQuery object
+                 }
+             }
+         });
+     }
+ 
+     adjustSummernoteHeight();
+ 
+     $(window).resize(function() {
+         adjustSummernoteHeight();
+     });
+ });
+ </script>
+ 
+  <!-- <script type="text/javascript">
+    $(function() {
+      $('.summernote').summernote({
+        //height: 500,
+        tabsize: 2,
+        toolbarContainer : "#toolbar"
+
+        
+      });
+    });
+  </script> -->
+ 
+</head>
+<body>
+<!-- <div class="placeholder">
+    hi,<br>
+    we are summernote.<br>
+    please, write text here!<br>
+    super simple WYSIWYG editor on Bootstrap
+</div> -->
+<div class="titleDiv">
+<h1 class="title-H"> Web HTML Generator </h1>
+</div>
+<div class="containerDiv">
+
+  <textarea id="summernote"  class="summernote">
+
+  </textarea>
+</div>
