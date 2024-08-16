@@ -56,14 +56,15 @@ group :jekyll_plugins do
 ```
 > bundle install
 > 
-### jekyll 로컬에 download zip파일 
+### [TIP] jekyll 테마를 로컬컴에 다운로드후 VSCODE열기( zip파일 )
 - jekyll 빈 프로젝트 생성
 - 다운로드한 zip파일 안에 jekyll 테마와 버전정보를
 - 새로 생성한 빈 프로젝트의 gem파일에 추가
 - bundle install
 - bundle exec serve 실행
+- Http://localhost:4000/
   
-### 설치 TIP
+### [TIP] 설치 
 - 최신 루비버전은 설치중 에러가 날 확률이 높으므로 낮은버전 3.0 추천
 - 제킬 실행시
 - c:\dir> mysite > bundle exec jekyll serve  (권장 실행)
