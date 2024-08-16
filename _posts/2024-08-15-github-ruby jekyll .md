@@ -11,10 +11,10 @@ tags: [github, jekyll]
 ### 권장 버전 
 [https://rubyinstaller.org/downloads/  ](https://rubyinstaller.org/downloads/)
 Ruby+Devkit 3.0.7-1 (x64)  
-exe파일을 pc에서 보안차단할 경우 관리자로 실행(추가정보 더보기)
-설치중 cmd.exe가 자동실행  ==> 3 - MSYS2 and MINGW development toolchain 엔터
-터미널 닫기
-### error : 최신버전을 사용하면 bundle install에서 gem wdm 구문에서 에러가 발생
+exe파일을 pc에서 보안차단할 경우 관리자로 실행(추가정보 더보기)  
+설치중 cmd.exe가 자동실행  ==> 3 - MSYS2 and MINGW development toolchain 엔터  
+터미널 닫기  
+### error : 최신버전을 사용하면 bundle install에서 gem wdm 구문에서 에러가 발생  
 
 
 # Jekyll 설치
