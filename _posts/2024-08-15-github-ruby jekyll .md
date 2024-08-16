@@ -18,12 +18,13 @@ exe파일을 pc에서 보안차단할 경우 관리자로 실행(추가정보 �
 
 
 # Jekyll 설치
-어떤폴더 터미널> gem install bundler
-어떤폴더 터미널> gem install jekyll
+터미널> gem install bundler  
+터미널> gem install jekyll  
+
 
 # Jekyll 프로젝트 생성 (기본테마 설치됨 minimal)
 c:> jekyll new mysite  
-c:> cd mysite  
+c:> cd mysite  (프로젝트 폴더로 이동 - 중요)  
 c:\dir> mysite > bundle exec jekyll serve  (권장 실행)
 # Jekyll 나만의 테마 생성  
 c:> jekyll new-theme mytheme    
