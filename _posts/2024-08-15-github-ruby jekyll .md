@@ -67,5 +67,5 @@ group :jekyll_plugins do
 ### [TIP] 설치 
 - 최신 루비버전은 설치중 에러가 날 확률이 높으므로 낮은버전 3.0 추천
 - 제킬 실행시
-- c:\dir> mysite > bundle exec jekyll serve  (권장 실행)
+- c:\dir> mysite > bundle exec jekyll serve  (권장 실행)  
 ~~c:> mysite > jekyll serve  (gem 버전오류 가능-비추)~~
