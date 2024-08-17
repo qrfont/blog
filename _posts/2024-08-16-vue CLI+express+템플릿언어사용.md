@@ -2,7 +2,7 @@
 
 ## 예제
 http://localhost:8080/dev/filelist  
-브라우저에서 폴더 목록과 링크를 볼 수 있다
+브라우저에서 자동 메뉴구성
 ```
 \dev\sample\textstyle.html
 \dev\sample\textstyle02.html
