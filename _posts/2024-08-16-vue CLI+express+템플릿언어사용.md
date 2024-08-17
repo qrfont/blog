@@ -1,5 +1,16 @@
 # vue CLI 프로젝트 안에서 express 정적폴더 생성하고 템플릿 언어 ejs 사용법
 
+## 예제
+http://localhost:8080/dev/filelist 
+클릭하면 해당폴더의 목록과 링크
+```
+\dev\sample\textstyle.html
+\dev\sample\textstyle02.html
+\dev\sample\textstyle03.html
+\dev\sample\textstyle04.html
+\dev\sample\textstyle05.html
+```
+
 ## 사용 목적
 - 로컬에서 다양한 웹서비스를 테스트할때 편리
 - vue 빌드할때 public폴더처럼 빌드(카피)되지 않음
