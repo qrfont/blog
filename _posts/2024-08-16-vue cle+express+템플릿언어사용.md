@@ -4,7 +4,7 @@
 로컬에서 다양한 웹서비스를 테스트할때 편리  
 
 ## 설정방법
-- vue루트폴더 > npm install express ejs 
+- vue루트폴더 > npm install express ejs  설치
 - vue.config.js 수정
 - vu루트폴더> dev 폴더생성
 - dev>filelist.ejs 생성
