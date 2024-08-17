@@ -2,7 +2,7 @@
 
 ## 예제
 http://localhost:8080/dev/filelist 
-클릭하면 해당폴더의 목록과 링크
+브라우저에서 폴더 목록과 링크를 볼 수 있다
 ```
 \dev\sample\textstyle.html
 \dev\sample\textstyle02.html
@@ -12,7 +12,8 @@ http://localhost:8080/dev/filelist
 ```
 
 ## 사용 목적
-- 로컬에서 다양한 웹서비스를 테스트할때 편리
+- 링크된 파일목록을 브라우저에서 확인
+- 다양한 웹서비스를 테스트할때 편리
 - vue 빌드할때 public폴더처럼 빌드(카피)되지 않음
 - public처럼 정적폴더 생성
 - vue 안에서 express 서버가동하여 템플릿언어 ejs 를 사용할 수 있다
