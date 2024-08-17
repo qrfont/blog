@@ -4,8 +4,15 @@
 로컬에서 다양한 웹서비스를 테스트할때 편리  
 
 ## 설정방법
-vue루트폴더 > npm install express ejs 
+- vue루트폴더 > npm install express ejs 
+- vue.config.js 수정
+- vu루트폴더> dev 폴더생성
+- dev>filelist.ejs 생성
+- vue > npm run serve 서버실행
+- 브라우저 확인 http://localhost:8080/dev/filelist
+- 소스는 아래에 첨부
 
+  
 ### vue루트폴더> express.js
 ```
 const express = require('express')
@@ -77,4 +84,26 @@ module.exports = defineConfig({
 })
 
 ```
+### vue>dev>filelist.ejs
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File List</title>
+</head>
+<body>
+    <h1>Available Files</h1>
+    <ul>
+        <% files.forEach(file => { %>
+            <li><a href="/dev/<%= file %>"><%= file %></a></li>
+        <% }) %>
+    </ul>
+</body>
+</html>
 
+```
+### 실행
+vue> npm run serve 
+브라우저 > http://localhost:8080/dev/filelist
