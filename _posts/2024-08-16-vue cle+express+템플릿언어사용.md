@@ -1,0 +1,80 @@
+### vue cle폴더안에서 express 서버가동하여 템플릿언어 ejs 사용법
+
+## 사용목적
+로컬에서 다양한 웹서비스를 테스트할때 편리  
+
+## 설정방법
+vue루트폴더 > npm install express ejs 
+
+### vue루트폴더> express.js
+```
+const express = require('express')
+const fs = require('fs')
+const path = require('path')
+
+module.exports = function (app) {
+  const directoryPath = path.join(__dirname, 'dev')
+
+  // EJS 템플릿 엔진 설정
+  app.set('views', directoryPath)
+  app.set('view engine', 'ejs')
+
+  // 정적 파일 제공 (dev 폴더)
+  app.use('/dev', express.static(directoryPath))
+
+  // 모든 하위 폴더를 포함한 HTML 파일 목록 생성
+  function getHtmlFiles (dir, fileList = []) {
+    const files = fs.readdirSync(dir)
+
+    files.forEach(file => {
+      const filePath = path.join(dir, file)
+      const stat = fs.statSync(filePath)
+
+      if (stat.isDirectory()) {
+        // 디렉토리인 경우 재귀적으로 탐색
+        getHtmlFiles(filePath, fileList)
+      } else if (stat.isFile() && path.extname(file) === '.html') {
+        // HTML 파일인 경우 목록에 추가
+        fileList.push(filePath.replace(__dirname, '')) // 상대 경로로 변환
+      }
+    })
+
+    return fileList
+  }
+
+  // EJS 파일을 렌더링하여 제공
+  app.get('/dev/filelist', (req, res, next) => {
+    try {
+      const htmlFiles = getHtmlFiles(directoryPath)
+      if (!res.headersSent) {
+        res.render('filelist', { files: htmlFiles })
+      }
+    } catch (error) {
+      if (!res.headersSent) {
+        next(error)
+      }
+    }
+  })
+}
+```
+
+### vue.config.js 
+
+```
+const { defineConfig } = require('@vue/cli-service')
+const devServerApp = require('./express')
+
+module.exports = defineConfig({
+  transpileDependencies: true,
+  devServer: {
+    onBeforeSetupMiddleware (devServer) {
+      if (!devServer) {
+        throw new Error('webpack-dev-server is not defined')
+      }
+      devServerApp(devServer.app)
+    }
+  }
+})
+
+```
+
