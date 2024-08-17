@@ -115,7 +115,7 @@ module.exports = defineConfig({
     <h1>Available Files</h1>
     <ul>
         <% files.forEach(file => { %>
-            <li><a href="/dev/<%= file %>"><%= file %></a></li>
+            <li><a href="<%= file %>"><%= file %></a></li>
         <% }) %>
     </ul>
 </body>
