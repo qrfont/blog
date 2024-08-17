@@ -12,13 +12,13 @@
 - vue루트폴더 > npm install express ejs  설치
 - vue.config.js 수정
 - vu루트폴더> dev 폴더생성
-- dev>filelist.ejs 생성
+- vue > dev > filelist.ejs 생성
 - vue > npm run serve 서버실행
 - 브라우저 확인 http://localhost:8080/dev/filelist
 - 소스는 아래에 첨부
 
-  
-### vue루트폴더> express.js
+## 소스 첨부
+### express.js
 ```
 const express = require('express')
 const fs = require('fs')
@@ -89,7 +89,7 @@ module.exports = defineConfig({
 })
 
 ```
-### vue>dev>filelist.ejs
+### filelist.ejs
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -110,5 +110,5 @@ module.exports = defineConfig({
 
 ```
 ### 실행
-vue> npm run serve 
-브라우저 > http://localhost:8080/dev/filelist
+- vue > npm run serve 
+- 브라우저 > http://localhost:8080/dev/filelist
